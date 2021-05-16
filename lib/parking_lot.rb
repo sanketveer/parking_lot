@@ -26,11 +26,7 @@ class ParkingLot
   def leave
   end
 
-  def free_spots
-    free_spots = spots.find {|spot| spot.free?}
-  end
-
   def next_free_spot
-    next_free_spot = free_spots&.first
+    next_free_spot = spots.find {|spot| spot.free?}
   end
 end

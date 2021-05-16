@@ -24,8 +24,10 @@ class Spot
   end
 
   def reg_no
+    car.reg_no if car
   end
 
-  def car_color
+  def color
+    car.color if car
   end
 end

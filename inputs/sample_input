@@ -1,1 +1,13 @@
 create_parking 6
+park MH-25-HH-1234 Purple
+park MH-25-HH-2345 Red
+park MH-25-HH-5678 Purple
+park MH-25-BB-9101 Black
+park MH-25-HH-6789 Blue
+park MH-25-HH-1012 Black
+leave 4
+park MH-25-MA-3333 Purple
+park MH-25-MA-9999 Purple
+registration_numbers_for_cars_with_colour Purple
+ticket_numbers_for_cars_with_colour Purple
+ticket_number_for_registration_number MH-25-HH-6789

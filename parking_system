@@ -3,6 +3,6 @@ require 'pry';
 
 def main
 input = File.read(ARGV[0])
-binding.pry
+
 end
 main()

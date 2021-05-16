@@ -10,15 +10,13 @@ class ParkingLot
       spot_number = index + 1
       spots[index] = Spot.new(spot_number)
     end
-    puts "Create a parking lot with #{ number_of_spots } spots"
+    puts "Created a parking lot with #{ number_of_spots } spots"
   end
 
   def park
-    #to park the car
   end
 
   def leave
-     #to free the parking slot
   end
 
 end

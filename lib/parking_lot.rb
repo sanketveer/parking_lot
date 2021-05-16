@@ -14,8 +14,9 @@ class ParkingLot
   end
 
   def park(reg_no, color)
+    binding.pry
     if next_free_spot
-      puts "alloted spot bunber #{next_free_spot.id}"
+      puts "alloted spot nunber #{next_free_spot.id}"
       next_free_spot.park(reg_no, color)
     else
       puts "parking is full"
@@ -25,8 +26,8 @@ class ParkingLot
   def leave
   end
 
-  def free_spot
-    free_spots = spots.each {|spot| spot.free?}
+  def free_spots
+    free_spots = spots.find {|spot| spot.free?}
   end
 
   def next_free_spot

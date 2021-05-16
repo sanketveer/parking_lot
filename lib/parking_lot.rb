@@ -13,10 +13,23 @@ class ParkingLot
     puts "Created a parking lot with #{ number_of_spots } spots"
   end
 
-  def park
+  def park(reg_no, color)
+    if next_free_spot
+      puts "alloted spot bunber #{next_free_spot.id}"
+      next_free_spot.park(reg_no, color)
+    else
+      puts "parking is full"
+    end
   end
 
   def leave
   end
 
+  def free_spot
+    free_spots = spots.each {|spot| spot.free?}
+  end
+
+  def next_free_spot
+    next_free_spot = free_spots&.first
+  end
 end

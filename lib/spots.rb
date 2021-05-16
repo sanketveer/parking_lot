@@ -7,11 +7,11 @@ class Spot
     @id = id.to_i
   end
 
-  def park(reg_no, car_color)
+  def park(reg_no, color)
     if self.car
       raise "Car Already Parked"
     else
-      self.car = ::car.new(reg_no, car_color)
+      self.car = ::Car.new(reg_no, color)
     end
   end
 

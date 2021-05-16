@@ -6,7 +6,7 @@ class ParkingLot
 
   def initialize(number_of_spots)
     @spots = []
-    number_of_spots.times do |index|
+    number_of_spots.to_i.times do |index|
       spot_number = index + 1
       spots[index] = Spot.new(spot_number)
     end

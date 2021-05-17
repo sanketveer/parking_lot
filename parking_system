@@ -2,6 +2,7 @@
 require_relative './lib/parking_lot'
 require 'rspec';
 require 'pry';
+require 'simplecov'
 
 def process_input(input)
  parking_lot = nil
@@ -18,6 +19,7 @@ def process_input(input)
 end
 
 def main
+  SimpleCov.start
   RSpec::Core::Runner.run([File.dirname(__FILE__) + '/specs'])
   if (ARGV.length == 0)
     puts "Please enter file parameter"

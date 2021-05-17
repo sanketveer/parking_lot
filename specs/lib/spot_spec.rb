@@ -30,7 +30,6 @@ describe Spot do
       end
 
       it 'throws error if a car is parked where spot is filled' do
-        binding.pry
         spot = Spot.new('1')
         spot.park('reg_no', 'color')
         expect { spot.park('reg_no1', 'color1') }.to raise_error("Car Already Parked")

@@ -43,8 +43,10 @@ class ParkingLot
   end
 
   def ticket_number_for_registration_number(reg_no)
-    ticket_numbers_of_spots =  spots.collect { |spot| spot.id if spot.reg_no == reg_no}
-    puts ticket_numbers_of_spots.compact.join(',')
+    spot = spots.find do |spot|
+      spot.reg_no == reg_no
+    end
+    puts spot ? spot.id : 'Not Found'
   end
 
   private

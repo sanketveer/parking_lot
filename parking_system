@@ -21,22 +21,6 @@ end
 def main
   SimpleCov.start
   RSpec::Core::Runner.run([File.dirname(__FILE__) + '/specs'])
-  if (ARGV.length == 0)
-    puts "Please enter file parameter"
-    return
-  else
-    begin
-      input = File.read(ARGV[0])
-    rescue StandardError => e
-      puts "Error reading file #{ e }"
-      return
-    end
-  end
-  begin
-    process_input(input)
-  rescue StandardError => e
-  puts "Error processing input. Error - #{ e }"
-  end
 end
 
 main()
